@@ -19,6 +19,7 @@ RUN ln -s /opt/bitnami/scripts/memcached/entrypoint.sh /entrypoint.sh
 RUN ln -s /opt/bitnami/scripts/memcached/run.sh /run.sh
 
 COPY rootfs /
+RUN chmod +x -R /opt/bitnami
 RUN /opt/bitnami/scripts/memcached/postunpack.sh
 ENV BITNAMI_APP_NAME="memcached" \
     BITNAMI_IMAGE_VERSION="1.6.6-debian-10-r83" \
